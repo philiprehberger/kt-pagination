@@ -11,4 +11,17 @@ public data class PageInfo(
     public val nextPage: Int?,
     public val previousPage: Int?,
     public val offset: Long,
-)
+) {
+    /** Return all pagination metadata as a map for easy JSON serialization. */
+    public fun toMap(): Map<String, Any> = buildMap {
+        put("currentPage", currentPage)
+        put("pageSize", pageSize)
+        put("totalItems", totalItems)
+        put("totalPages", totalPages)
+        put("hasNext", hasNext)
+        put("hasPrevious", hasPrevious)
+        if (nextPage != null) put("nextPage", nextPage)
+        if (previousPage != null) put("previousPage", previousPage)
+        put("offset", offset)
+    }
+}

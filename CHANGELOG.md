@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.0] - 2026-04-05
+
+- Add `PageInfo.toMap()` method for serializing pagination metadata as a `Map<String, Any>` for easy JSON serialization
+- Nullable fields (`nextPage`, `previousPage`) are omitted from the map when null
+
 ## 0.1.4 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section
