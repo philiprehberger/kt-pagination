@@ -2,12 +2,9 @@
 
 [![CI](https://github.com/philiprehberger/kt-pagination/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-pagination/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/pagination)](https://central.sonatype.com/artifact/com.philiprehberger/pagination)
+[![License](https://img.shields.io/github/license/philiprehberger/kt-pagination)](LICENSE)
 
 Framework-agnostic pagination for offset, cursor, and keyset patterns.
-
-## Requirements
-
-- Kotlin 1.9+ / Java 17+
 
 ## Installation
 
@@ -15,7 +12,7 @@ Framework-agnostic pagination for offset, cursor, and keyset patterns.
 
 ```kotlin
 dependencies {
-    implementation("com.philiprehberger:pagination:0.1.0")
+    implementation("com.philiprehberger:pagination:0.1.2")
 }
 ```
 
@@ -25,7 +22,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>pagination</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
