@@ -11,7 +11,7 @@ Framework-agnostic pagination for offset, cursor, and keyset patterns.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-implementation("com.philiprehberger:pagination:0.1.3")
+implementation("com.philiprehberger:pagination:0.2.0")
 ```
 
 ### Maven
@@ -20,7 +20,7 @@ implementation("com.philiprehberger:pagination:0.1.3")
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>pagination</artifactId>
-    <version>0.1.3</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -42,6 +42,10 @@ val decoded = Cursor.decode(encoded) // "user:123"
 // Keyset
 val result = keysetPaginate(items, pageSize = 20)
 result.hasMore // true if more items available
+
+// Serialize metadata to a map (for JSON responses)
+val map = page.toMap() // Map<String, Any>
+// { "currentPage": 3, "pageSize": 20, "totalItems": 250, ... }
 ```
 
 ## API
@@ -52,6 +56,7 @@ result.hasMore // true if more items available
 | `pageResponse(items, page, pageSize, totalItems)` | Page of items with metadata |
 | `CursorPage<T>` | Cursor-based page with items, cursor, hasMore |
 | `Cursor.encode(value)` / `Cursor.decode(encoded)` | Opaque cursor encoding |
+| `PageInfo.toMap()` | Serialize pagination metadata to `Map<String, Any>` |
 | `keysetPaginate(items, pageSize)` | Keyset-based pagination |
 
 ## Development
